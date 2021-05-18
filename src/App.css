@@ -1,0 +1,35 @@
+*{
+    scroll-behavior: smooth;
+}
+.app{
+    min-height: 100vh;
+    background-color:black;
+    color: white;
+    padding: 65px 0px;
+}
+body{
+    font-family: 'KoHo', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+.pagetitle{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-bottom: 8px;
+}
+.page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+@media only screen and (max-width: 650px){
+
+    .app{
+        padding-top: 55px;
+    }
+
+}

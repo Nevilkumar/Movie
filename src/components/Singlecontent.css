@@ -1,0 +1,47 @@
+.media{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    margin: 8px;
+    font-weight: bold;
+}
+.media:hover{
+    background-color: yellow;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.poster{
+    border-radius: 8px;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    padding: 4px 0px;
+}
+
+.subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0px;
+}
+
+@media only screen and (max-width: 550px){
+    .media{
+        width: 42%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .title{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
