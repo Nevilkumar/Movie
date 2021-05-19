@@ -12,9 +12,7 @@
 }
 .content-portrait{
     display: none;
-    /* object-fit: contain; */
-    /* border-radius: 15px; */
-    /* border:2px solid black; */
+    object-fit: contain;
 }
 .content-landscape{
     object-fit: contain;
