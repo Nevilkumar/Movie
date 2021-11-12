@@ -5,7 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   ul: {
     "& .MuiPaginationItem-root": {
-      color: "white"
+      color: "white",
+      fontSize: '20px',
     }
   }
 }));

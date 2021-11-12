@@ -50,9 +50,8 @@ const Genres = ({ type, setpage, genres=[], selectedgenres=[], setgenres, setSel
                 <Chip onClick={() => handleadd(genre)} 
                     label={genre.name} 
                     // variant="outlined"
-                    size="small"
                     color="primary"
-                    style={{ margin: "2px" }}
+                    style={{ margin: "2px", fontSize:'18px', fontFamily:'KoHo' }}
                     key={genre.id}
                     clickable
                     onDelete={() => handleremove(genre)}    
@@ -62,9 +61,8 @@ const Genres = ({ type, setpage, genres=[], selectedgenres=[], setgenres, setSel
                 <Chip onClick={() => handleadd(genre)} 
                     label={genre.name} 
                     // variant="outlined"
-                    size="small"
                     color="secondary"
-                    style={{ margin: "2px" }}
+                    style={{ margin: "2px", fontSize:'18px', fontFamily:'KoHo' }}
                     key={genre.id}
                     clickable
                     onDelete={() => handleremove(genre)}

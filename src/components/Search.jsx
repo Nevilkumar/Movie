@@ -64,13 +64,13 @@ const Search = () => {
 
             <div className="btn">
                 <button id="b1" className="b" onClick={() => {
-                    document.getElementById("b1").style.backgroundColor = "yellow";
-                    document.getElementById("b2").style.backgroundColor = "orange";
+                    document.getElementById("b1").style.backgroundColor = "#673ab7";
+                    document.getElementById("b2").style.backgroundColor = "#e91e63";
                     settype("movie")}
                 }>Movies</button>
                 <button id="b2" className="b" onClick={() => {
-                    document.getElementById("b2").style.backgroundColor = "yellow";
-                    document.getElementById("b1").style.backgroundColor = "orange";
+                    document.getElementById("b2").style.backgroundColor = "#673ab7";
+                    document.getElementById("b1").style.backgroundColor = "#e91e63";
                     settype("tv")}
                 }>TV Series</button>
             </div>

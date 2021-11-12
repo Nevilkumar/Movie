@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         width: "80%",
-        height: "75%",
+        height: "77%",
         color: "white",
         border:"3px solid white",
         backgroundColor: "black",
@@ -90,7 +90,6 @@ export default function Contentmodel({ children, media_type, id }) {
                                     &nbsp;({(content.first_air_date || content.release_date ||"----").substring(0, 4)})
                                 </span>
 
-                                    {<i className="tagline">{content.tagline}</i>}
 
                                     <span className="content-description">
                                         {content.overview}
@@ -101,7 +100,7 @@ export default function Contentmodel({ children, media_type, id }) {
                                     </div>
                                     <a className="link" href={`https://www.youtube.com/watch?v=${video}`} target="_blank">
                                         <button className="ybtn">
-                                            <span className="yt"><YouTubeIcon/></span>
+                                            <span className="yt"><YouTubeIcon fontSize="large"/></span>
                                             Watch The Trailer
                                         </button>
                                     </a>
