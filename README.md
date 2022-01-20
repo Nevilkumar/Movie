@@ -1,11 +1,11 @@
-## Updated Movie Website UI
+# Movie Website
 
-<img src="https://github.com/Nevilkumar/Movie/blob/main/Readme_Images/1.png">
-
-<img src="https://github.com/Nevilkumar/Movie/blob/main/Readme_Images/2.png">
-
-<img src="https://github.com/Nevilkumar/Movie/blob/main/Readme_Images/3.png">
-
-<img src="https://github.com/Nevilkumar/Movie/blob/main/Readme_Images/4.png">
-
-<img src="https://github.com/Nevilkumar/Movie/blob/main/Readme_Images/5.png">
+<img src="./Readme_Images/1.png">
+&nbsp;
+<img src="./Readme_Images/2.png">
+&nbsp;
+<img src="./Readme_Images/3.png">
+&nbsp;
+<img src="./Readme_Images/4.png">
+&nbsp;
+<img src="./Readme_Images/5.png">
