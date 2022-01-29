@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     "& .MuiPaginationItem-root": {
       color: "white",
       fontSize: '20px',
+      fontFamily: 'Klee One'
     }
   }
 }));

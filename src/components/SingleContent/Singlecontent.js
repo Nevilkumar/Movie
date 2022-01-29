@@ -2,12 +2,20 @@ import React from 'react';
 import './Singlecontent.css';
 import Badge from '@material-ui/core/Badge';
 import { makeStyles } from "@material-ui/core/styles";
-import p from "./p.jpg";
-import Contentmodel from './Contentmodel';
+import p from "../ContentModel/p.jpg";
+import Contentmodel from '../ContentModel/Contentmodel';
 
 const useStyles = makeStyles((theme) => ({
     badge: {
       fontSize: 15,
+      fontWeight: 'bold',
+      width: 35,
+      height: 35,
+      fontFamily: 'Klee One',
+      display: 'flex',
+      justifyContent:'center',
+      alignItems: 'center',
+      borderRadius: '50%'
     }
 }));
 
@@ -17,8 +25,8 @@ const Singlecontent = ({id, poster, title, date, media_type, vote_average }) => 
     return (
         <>
             <Contentmodel media_type={media_type} id={id}>
-                <Badge classes={{ badge: classes.badge }} badgeContent={vote_average} color={"secondary"} />
-                <img className="poster" src={poster? img_300+poster : p} />
+                <Badge classes={{ badge: classes.badge }} badgeContent={vote_average} color={"primary"} />
+                <img className="poster" src={poster? img_300+poster : p} alt=''/>
                 <b className="title">{title}</b>
                 <div className="details">
                     <span className="subtitle">

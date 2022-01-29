@@ -1,8 +1,8 @@
 .media{
     display: flex;
     flex-direction: column;
-    width: 250px;
-    padding: 5px;
+    width: 280px;
+    padding: 6px;
     background-color: white;
     color: black;
     border-radius: 4px;
@@ -10,10 +10,6 @@
     transition: all 0.5s ease-out;
     letter-spacing: 0.5px;
     cursor: pointer;
-    border: 5px solid #318CE7;
-}
-.media:hover{
-   transform: scale(1.05);
 }
 .details{
     position: relative;
@@ -26,11 +22,14 @@
 }
 .poster{
     border-radius: 4px;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 5px;
 }
 .title{
     width: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     padding: 4px 0px;
 }
 
@@ -41,19 +40,21 @@
     font-weight: bold;
     justify-content: space-between;
     padding: 4px 0px;
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 550px){
     .media{
-        width: 80%;
+        width: 78%;
+        /* width: 270px; */
         font-size: 15px;
         font-weight: bold;
     }
     .title{
-        font-size: 15px;
+        font-size: 18px;
         font-weight: bold;
     }
     .poster{
-        height: 400px;
+        height: 380px;
     }
 }

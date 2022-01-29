@@ -1,29 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
 *{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.app{
-    min-height: 100vh;
-    background-color:black;
-    color: white;
-    padding: 65px 0px;
+
+::-webkit-scrollbar{
+    display: none;
 }
+
 body{
     font-family: 'KoHo', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Klee One', cursive;
     margin: 0;
     padding: 0;
 
 }
-::-webkit-scrollbar{
-    display: none;
+
+.app{
+    min-height: 100vh;
+    background-color:black;
+    background-color:  #e91e63;
+    background-color: #5529dc;
+    background-color: #060822;
+    background-color: #0d1117;
+    background-color: #11101d;
+    color: white;
+    padding: 65px 0px;
 }
+.container{
+    max-width: 1300px;
+    margin: auto;
+}
+
 .pagetitle{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-size: 32px;
-    letter-spacing: 1px;
-    margin-top: 8px;
-    padding-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: 18px;
+    margin-bottom: 5px;
 }
 .page{
     width: 100%;
@@ -31,6 +51,7 @@ body{
     justify-content: center;
     padding: 5px;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 @media only screen and (max-width: 650px){
 
@@ -38,4 +59,14 @@ body{
         padding-top: 55px;
     }
 
+    .container{
+        max-width: 90vw;
+        margin: auto;
+    }
+
+    .pagetitle{
+        font-size: 26px;
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
 }

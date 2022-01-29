@@ -3,14 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import './Singlecontent.css';
-import './Contentmodel.css';
 import axios from 'axios';
-import p from './p.jpg';
 import Button from '@material-ui/core/Button';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import lp from './lp.jpg';
 
+import '../SingleContent/Singlecontent.css';
+import './Contentmodel.css';
+import p from './p.jpg';
+import lp from './lp.jpg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,13 +20,13 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
     paper: {
-        width: "80%",
-        height: "77%",
         color: "white",
         border:"3px solid white",
-        backgroundColor: "black",
+        outline: "none",
+        backgroundColor: "#11101d",
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+        padding: 30,
+        borderRadius: 4,
     },
 }));
 
@@ -77,11 +77,12 @@ export default function Contentmodel({ children, media_type, id }) {
                     timeout: 500,
                 }}
             >
+            <div className='contentModel-width-class'>
             <Fade in={open}>
                 {content && (<div className={classes.paper}>
                     <div className="contentmodel">
-                        <img className='content-portrait' src={content.poster_path?`https://image.tmdb.org/t/p/w300/${content.poster_path}`:p }/>
-                        <img className='content-landscape' src={content.backdrop_path ? `https://image.tmdb.org/t/p/w500/${content.backdrop_path}` : lp} />
+                        <img className='content-portrait' src={content.poster_path?`https://image.tmdb.org/t/p/w300/${content.poster_path}`:p } alt=''/>
+                        <img className='content-landscape' src={content.backdrop_path ? `https://image.tmdb.org/t/p/w500/${content.backdrop_path}` : lp} alt='' />
 
                             <div className="content-about">
 
@@ -108,7 +109,8 @@ export default function Contentmodel({ children, media_type, id }) {
                             </div>
                         </div>
                     )}
-                </Fade>
+            </Fade>
+            </div>
             </Modal>
         </>
     );

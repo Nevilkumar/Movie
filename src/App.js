@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar.js';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import Trending from './components/Trending.jsx';
-import Movies from './components/Movies.jsx';
-import TVSeries from './components/TVSeries.jsx';
-import Search from './components/Search.jsx';
+import Trending from './components/Trending/Trending';
+import Movies from './components/Movies/Movies';
+import TVSeries from './components/TVSeries/TVSeries';
+import Search from './components/Search/Search';
 
 
-import Header from './components/Header.js';
-import SimpleBottomNavigation from './components/Navbar.js';
+import Header from './components/Header/Header';
+import SimpleBottomNavigation from './components/Navbar/Navbar';
 import { Container } from '@material-ui/core';
 
 function App() {
@@ -20,14 +19,16 @@ function App() {
         <Header />
         
         <div className='app'>
-          <Container>
+          {/* <Container> */}
+          <div className='container'>
             <Switch>
               <Route exact path='/' component={Trending}/>
               <Route exact path='/movies' component={Movies}/>
               <Route exact path='/tvseries' component={TVSeries}/>
               <Route exact path='/search' component={Search}/>
             </Switch>
-          </Container>
+          </div>
+          {/* </Container> */}
         </div>
 
         <SimpleBottomNavigation />

@@ -14,10 +14,11 @@ const useStyles = makeStyles({
         height:'70px',
         position: 'fixed',
         bottom: 0,
-        backgroundColor: 'black',
-        borderTop:'4px solid white',
+        backgroundColor: '#1d1b31',
+        borderTop:'2px solid white',
         borderColor:'white',
         zIndex: 100,
+        fontFamily: 'Klee One',
     },
 });
 
@@ -44,10 +45,10 @@ export default function SimpleBottomNavigation() {
             showLabels
             className={classes.root}
         >
-            <BottomNavigationAction style={{ color: 'white' }} label="TRENDING" icon={<WhatshotIcon fontSize='large' />} />
-            <BottomNavigationAction style={{ color: 'white' }} label="MOVIES" icon={<MovieIcon fontSize='large' />} />
-            <BottomNavigationAction style={{ color: 'white' }} label="TV SERIES" icon={<TvIcon fontSize='large' />} />
-            <BottomNavigationAction style={{ color: 'white' }} label="SEARCH" icon={<SearchIcon fontSize='large' />} />
+            <BottomNavigationAction style={{ color: 'white' }} label="TRENDING" icon={<WhatshotIcon fontSize='medium' />} />
+            <BottomNavigationAction style={{ color: 'white' }} label="MOVIES" icon={<MovieIcon fontSize='medium' />} />
+            <BottomNavigationAction style={{ color: 'white' }} label="TV SERIES" icon={<TvIcon fontSize='medium' />} />
+            <BottomNavigationAction style={{ color: 'white' }} label="SEARCH" icon={<SearchIcon fontSize='medium' />} />
         </BottomNavigation>
     );
 }

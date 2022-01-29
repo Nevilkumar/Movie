@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { Button, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import './Search.css';
 import axios from 'axios';
-import Custompagination from './Custompagination';
-import Singlecontent from './Singlecontent.jsx';
-import './Trending.css';
+
+
+import './Search.css';
+import Custompagination from '../CustomPagination/Custompagination';
+import Singlecontent from '../SingleContent/Singlecontent';
+import '../Trending/Trending.css';
 
 
 const Search = () => {
@@ -50,27 +52,28 @@ const Search = () => {
         <>
             <ThemeProvider theme={darkTheme}>
                 <div className="Searchbar">
-                    <TextField
+                    {/* <TextField
                         style={{ width: "50%" }}
                         className="searchbox"
                         label="Search"
                         variant="filled"
                         value={searchtext}
                         onChange={(e) => setsearchtext(e.target.value)}
-                    />
+                    /> */}
+                    <input type="text" className='searchbox' onChange={(e) => setsearchtext(e.target.value)} />
                     <Button variant='contained' onClick={fetchsearch} style={{ marginLeft: "15px" }}><SearchIcon /></Button>
                 </div>
             </ThemeProvider>
 
             <div className="btn">
                 <button id="b1" className="b" onClick={() => {
-                    document.getElementById("b1").style.backgroundColor = "#673ab7";
-                    document.getElementById("b2").style.backgroundColor = "#e91e63";
+                    document.getElementById("b1").style.backgroundColor = "#1d1b31";
+                    document.getElementById("b2").style.backgroundColor = "#11101d";
                     settype("movie")}
                 }>Movies</button>
                 <button id="b2" className="b" onClick={() => {
-                    document.getElementById("b2").style.backgroundColor = "#673ab7";
-                    document.getElementById("b1").style.backgroundColor = "#e91e63";
+                    document.getElementById("b2").style.backgroundColor = "#1d1b31";
+                    document.getElementById("b1").style.backgroundColor = "#11101d";
                     settype("tv")}
                 }>TV Series</button>
             </div>
