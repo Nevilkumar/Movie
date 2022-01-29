@@ -11,8 +11,6 @@
 }
 
 body{
-    font-family: 'KoHo', sans-serif;
-    font-family: 'Work Sans', sans-serif;
     font-family: 'Klee One', cursive;
     margin: 0;
     padding: 0;
@@ -21,11 +19,6 @@ body{
 
 .app{
     min-height: 100vh;
-    background-color:black;
-    background-color:  #e91e63;
-    background-color: #5529dc;
-    background-color: #060822;
-    background-color: #0d1117;
     background-color: #11101d;
     color: white;
     padding: 65px 0px;

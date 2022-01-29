@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import TextField from '@material-ui/core/TextField';
 import { Button, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import axios from 'axios';
@@ -52,14 +51,6 @@ const Search = () => {
         <>
             <ThemeProvider theme={darkTheme}>
                 <div className="Searchbar">
-                    {/* <TextField
-                        style={{ width: "50%" }}
-                        className="searchbox"
-                        label="Search"
-                        variant="filled"
-                        value={searchtext}
-                        onChange={(e) => setsearchtext(e.target.value)}
-                    /> */}
                     <input type="text" className='searchbox' onChange={(e) => setsearchtext(e.target.value)} />
                     <Button variant='contained' onClick={fetchsearch} style={{ marginLeft: "15px" }}><SearchIcon /></Button>
                 </div>
