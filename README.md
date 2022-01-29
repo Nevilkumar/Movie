@@ -1,11 +1,11 @@
 # Movie Website
 
-<img src="./Readme_Images/1.png">
+<img src="./images/1.png">
 &nbsp;
-<img src="./Readme_Images/2.png">
+<img src="./images/2.png">
 &nbsp;
-<img src="./Readme_Images/3.png">
+<img src="./images/3.png">
 &nbsp;
-<img src="./Readme_Images/4.png">
+<img src="./images/4.png">
 &nbsp;
-<img src="./Readme_Images/5.png">
+<img src="./images/5.png">
