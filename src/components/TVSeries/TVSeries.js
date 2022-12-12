@@ -17,13 +17,12 @@ const TVSeries = ()=>{
     const [genres, setgenres] = useState([]);
     const genreforurl=useGenres(selectedgenres);
 
-    const main_url=`https://api.themoviedb.org/3/discover/tv?api_key=3f66b57e468e104429e647efd009c6d5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforurl}`;
+    const main_url=`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforurl}`;
     
     const fetchtrending = async ()=>{
         const {data} = await axios.get(main_url);
         setcontent(data.results);
         setnumofpages(data.total_pages);
-        console.log(numofpages);
     }
     useEffect(() => {
         fetchtrending();

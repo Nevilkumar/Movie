@@ -4,7 +4,6 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import axios from 'axios';
-import Button from '@material-ui/core/Button';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import '../SingleContent/Singlecontent.css';
@@ -13,7 +12,7 @@ import p from './p.jpg';
 import lp from './lp.jpg';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
     modal: {
         display: 'flex',
         alignItems: 'center',
@@ -21,14 +20,13 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         color: "white",
-        border:"3px solid white",
+        border: "3px solid white",
         outline: "none",
-        backgroundColor: "#11101d",
-        boxShadow: theme.shadows[5],
+        background: "#11101d",
         padding: 30,
         borderRadius: 4,
     },
-}));
+});
 
 export default function Contentmodel({ children, media_type, id }) {
     const classes = useStyles();
@@ -43,14 +41,13 @@ export default function Contentmodel({ children, media_type, id }) {
         setOpen(false);
     };
     const fetchdata = async () => {
-        const url = `https://api.themoviedb.org/3/${media_type}/${id}?api_key=3f66b57e468e104429e647efd009c6d5&language=en-US`;
+        const url = `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
         const { data } = await axios.get(url);
-        console.log(data);
         setcontent(data);
     };
 
     const fetchvedio = async () => {
-        const url = `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=3f66b57e468e104429e647efd009c6d5&language=en-US`;
+        const url = `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
         const { data } = await axios.get(url);
         setvideo(data.results[0]?.key);
     };
@@ -77,19 +74,19 @@ export default function Contentmodel({ children, media_type, id }) {
                     timeout: 500,
                 }}
             >
-            <div className='contentModel-width-class'>
-            <Fade in={open}>
-                {content && (<div className={classes.paper}>
-                    <div className="contentmodel">
-                        <img className='content-portrait' src={content.poster_path?`https://image.tmdb.org/t/p/w300/${content.poster_path}`:p } alt=''/>
-                        <img className='content-landscape' src={content.backdrop_path ? `https://image.tmdb.org/t/p/w500/${content.backdrop_path}` : lp} alt='' />
+                <div className='contentModel-width-class'>
+                    <Fade in={open}>
+                        {content && (<div className={classes.paper}>
+                            <div className="contentmodel">
+                                <img className='content-portrait' src={content.poster_path ? `https://image.tmdb.org/t/p/w300/${content.poster_path}` : p} alt='' />
+                                <img className='content-landscape' src={content.backdrop_path ? `https://image.tmdb.org/t/p/w500/${content.backdrop_path}` : lp} alt='' />
 
-                            <div className="content-about">
+                                <div className="content-about">
 
-                                <span className="content-title">
-                                    {content.name || content.title}
-                                    &nbsp;({(content.first_air_date || content.release_date ||"----").substring(0, 4)})
-                                </span>
+                                    <span className="content-title">
+                                        {content.name || content.title}
+                                        &nbsp;({(content.first_air_date || content.release_date || "----").substring(0, 4)})
+                                    </span>
 
 
                                     <span className="content-description">
@@ -101,16 +98,16 @@ export default function Contentmodel({ children, media_type, id }) {
                                     </div>
                                     <a className="link" href={`https://www.youtube.com/watch?v=${video}`} target="_blank">
                                         <button className="ybtn">
-                                            <span className="yt"><YouTubeIcon fontSize="large"/></span>
+                                            <span className="yt"><YouTubeIcon fontSize="large" /></span>
                                             Watch The Trailer
                                         </button>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    )}
-            </Fade>
-            </div>
+                        )}
+                    </Fade>
+                </div>
             </Modal>
         </>
     );

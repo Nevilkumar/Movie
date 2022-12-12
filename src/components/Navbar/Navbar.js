@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         height:'70px',
         position: 'fixed',
         bottom: 0,
-        backgroundColor: '#1d1b31',
+        background: '#1d1b31',
         borderTop:'2px solid white',
         borderColor:'white',
         zIndex: 100,

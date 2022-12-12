@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import p from "../ContentModel/p.jpg";
 import Contentmodel from '../ContentModel/Contentmodel';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
     badge: {
       fontSize: 15,
       fontWeight: 'bold',
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       borderRadius: '50%'
     }
-}));
+});
 
 const Singlecontent = ({id, poster, title, date, media_type, vote_average }) => {
     const img_300 = 'https://image.tmdb.org/t/p/w300';
@@ -25,7 +25,7 @@ const Singlecontent = ({id, poster, title, date, media_type, vote_average }) => 
     return (
         <>
             <Contentmodel media_type={media_type} id={id}>
-                <Badge classes={{ badge: classes.badge }} badgeContent={vote_average} color={"primary"} />
+                <Badge classes={{ badge: classes.badge }} badgeContent={Math.round(vote_average*10) / 10} color={"primary"} />
                 <img className="poster" src={poster? img_300+poster : p} alt=''/>
                 <b className="title">{title}</b>
                 <div className="details">
@@ -35,7 +35,6 @@ const Singlecontent = ({id, poster, title, date, media_type, vote_average }) => 
                     </span>
                 </div>
             </Contentmodel>
-
         </>
     );
 };

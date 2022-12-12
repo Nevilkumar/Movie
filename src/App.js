@@ -7,10 +7,9 @@ import Movies from './components/Movies/Movies';
 import TVSeries from './components/TVSeries/TVSeries';
 import Search from './components/Search/Search';
 
-
 import Header from './components/Header/Header';
 import SimpleBottomNavigation from './components/Navbar/Navbar';
-import { Container } from '@material-ui/core';
+require('dotenv').config();
 
 function App() {
   return (

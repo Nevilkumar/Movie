@@ -20,7 +20,7 @@ const Custompagination = ({ setpage, numofpages = 10 }) => {
   const classes = useStyles();
   return (
     <>
-      <Pagination hidePrevButton hideNextButton classes={{ ul: classes.ul }} backgroundColor="secondary" color="primary" count={numofpages} onChange={(e) => handlepagechange(e.target.textContent)} />
+      <Pagination hidePrevButton hideNextButton classes={{ ul: classes.ul }} background="secondary" color="primary" count={numofpages} onChange={(e) => handlepagechange(e.target.textContent)} />
     </>
   );
 }
